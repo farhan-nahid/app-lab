@@ -2,4 +2,151 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  height: 80px;
+  padding: 20px 10%;
+  background-color: rgba(255, 255, 255, 0.545);
+  box-shadow: 0 25px 45px rgb(79 86 101 / 8%);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  list-style-type: none;
+}
+
+.logo {
+  font-size: 25px;
+}
+
+.navbar ul li {
+  font-weight: 600;
+  display: inline-block;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  padding-right: 15px;
+  color: #242f51;
+}
+
+.navbar ul button {
+  margin-left: 30px;
+}
+
+.logo__title {
+  color: #fcae61;
+}
+
+.brand__button {
+  padding: 10px 40px;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #2500f9;
+  border: 3px solid #2500f9;
+  cursor: pointer;
+  font-weight: 800;
+  transition: 1.5s;
+  text-transform: uppercase;
+}
+
+.brand__button:hover {
+  border: 3px solid #2500f9;
+  background-color: #fff;
+  color: #2500f9;
+  transform: translateY(-5px);
+}
+
+/* banner css */
+
+#banner__container {
+  padding: 50px 10%;
+  background-image: url("../images/illustrations/banner-bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.ranking__area {
+  display: flex;
+  align-items: center;
+  width: 270px;
+  background-color: #e2eaed;
+  border-radius: 20px;
+}
+
+.ranking__area h6 {
+  font-size: 13px;
+  margin-left: 15px;
+  font-weight: 900;
+  color: #242f51;
+}
+
+.banner__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner__content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #242f51;
+  margin-bottom: 10px;
+}
+
+.banner__content p {
+  font-size: 19px;
+  color: #242f51;
+  word-spacing: 5px;
+  width: 80%;
+}
+
+.banner__buttons {
+  padding-top: 20px;
+}
+
+.banner__image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo__button {
+  margin-left: 30px;
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: 3px solid #2500f9;
+  background-color: #fff;
+  color: #2500f9;
+  cursor: pointer;
+  font-weight: 800;
+  transition: 1.5s;
+  text-transform: uppercase;
+}
+
+.demo__button:hover {
+  transform: translateY(-5px);
+  color: #fff;
+  background-color: #2500f9;
+  border: 3px solid #2500f9;
+}
+
+/* responsive with media queries */
+
+@media only screen and (max-width: 1080px) {
+  #banner__container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+  }
 }
