@@ -144,7 +144,22 @@ nav label {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+}
+
+.banner__image img {
+  animation: float 3s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-60px);
+  }
 }
 
 .demo__button {
@@ -166,6 +181,36 @@ nav label {
   color: #fff;
   background-color: #2500f9;
   border: 3px solid #2500f9;
+}
+
+/* companies css */
+
+main {
+  background-color: #f7f9fa;
+}
+
+.companies__container {
+  padding: 70px 8%;
+}
+
+.companies__container h6 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.companies__area {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.companies__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* responsive with media queries */
@@ -198,6 +243,11 @@ nav label {
   .demo__button {
     padding: 10px 20px;
   }
+
+  .companies__area {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
 }
 
 @media only screen and (max-width: 876px) {
@@ -215,6 +265,10 @@ nav label {
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
   }
+
+  .banner__image {
+    align-items: center;
+  }
 }
 
 @media only screen and (max-width: 841px) {
@@ -229,7 +283,7 @@ nav label {
     left: 0;
     right: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.545);
+    background-color: #fff;
     padding: 1rem 2rem;
     border-top: 0.1rem solid rgb(0, 0, 0, 0.1);
     box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.1);
@@ -257,5 +311,17 @@ nav label {
 
   nav input:checked ~ label::before {
     content: "\f00d";
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .companies__area {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .companies__area {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
