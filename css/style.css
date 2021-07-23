@@ -7,9 +7,14 @@
 
 nav {
   height: 80px;
-  padding: 20px 10%;
+  padding: 20px 8%;
   background-color: rgba(255, 255, 255, 0.545);
   box-shadow: 0 25px 45px rgb(79 86 101 / 8%);
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  top: 0;
 }
 
 .navbar {
@@ -32,8 +37,15 @@ nav {
 
 .navbar ul li a {
   text-decoration: none;
-  padding-right: 15px;
+  margin-right: 15px;
   color: #242f51;
+  transition: 0.7s;
+  padding: 5px 0;
+}
+
+.navbar ul li a:hover {
+  color: #fcae61;
+  border-bottom: 3px solid #2500f9;
 }
 
 .navbar ul button {
@@ -42,6 +54,18 @@ nav {
 
 .logo__title {
   color: #fcae61;
+}
+
+nav input {
+  display: none;
+}
+
+nav label {
+  font-size: 25px;
+  color: #242f51;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .brand__button {
@@ -54,6 +78,7 @@ nav {
   font-weight: 800;
   transition: 1.5s;
   text-transform: uppercase;
+  outline: 0;
 }
 
 .brand__button:hover {
@@ -66,7 +91,7 @@ nav {
 /* banner css */
 
 #banner__container {
-  padding: 50px 10%;
+  padding: 50px 8%;
   background-image: url("../images/illustrations/banner-bg.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -133,6 +158,7 @@ nav {
   font-weight: 800;
   transition: 1.5s;
   text-transform: uppercase;
+  outline: 0;
 }
 
 .demo__button:hover {
@@ -144,9 +170,92 @@ nav {
 
 /* responsive with media queries */
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1040px) {
+  .banner__content h1 {
+    font-size: 50px;
+  }
+
+  .demo__button {
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 1010px) {
+  nav {
+    padding: 20px 5%;
+  }
+
+  #banner__container {
+    padding: 50px 5%;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .brand__button {
+    padding: 10px 20px;
+  }
+
+  .demo__button {
+    padding: 10px 20px;
+  }
+}
+
+@media only screen and (max-width: 876px) {
+  .banner__content h1 {
+    font-size: 40px;
+  }
+
+  .banner__content p {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 848px) {
   #banner__container {
     grid-template-columns: repeat(1, 1fr);
-    gap: 50px;
+    gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 841px) {
+  nav label {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  nav .nav__items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.545);
+    padding: 1rem 2rem;
+    border-top: 0.1rem solid rgb(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.1);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: 0.3s linear;
+  }
+
+  .navbar ul li {
+    display: block;
+    margin-top: 15px;
+    border-bottom: 1px solid rgba(190, 179, 179, 0.37);
+  }
+
+  .navbar ul button {
+    margin-left: 0px;
+    margin-top: 15px;
+  }
+
+  nav input:checked ~ .nav__items {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  nav input:checked ~ label::before {
+    content: "\f00d";
   }
 }
