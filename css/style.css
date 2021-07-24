@@ -152,6 +152,7 @@ nav label {
 }
 
 .banner__image img {
+  width: 100%;
   animation: float 3s linear infinite;
 }
 
@@ -263,7 +264,7 @@ main {
 
 .single__feature {
   display: flex;
-  margin: 50px 0px;
+  margin: 30px 0px;
   background-color: #fff;
   padding: 20px;
   border-radius: 25px;
@@ -307,6 +308,126 @@ main {
   color: #737579;
 }
 
+/* smart jackpot css */
+
+.smart__jackpot__container {
+  padding: 70px 8%;
+}
+
+.smart__jackpot__heading {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.smart__jackpot__heading h1 {
+  font-size: 50px;
+  width: 80%;
+  font-weight: 700;
+  color: #242f51;
+}
+
+.smart__jackpot__heading p {
+  font-size: 19px;
+  color: #737579;
+  word-spacing: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.smart__jackpot__cards {
+  margin-top: 50px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.single__jackpot__card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+.single__jackpot__card:hover {
+  box-shadow: 2px 2px 20px gray;
+}
+
+.single__jackpot__card:nth-child(1) h4 {
+  color: #f66a78;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.single__jackpot__card:nth-child(2) h4 {
+  color: #4425fa;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.single__jackpot__card:nth-child(3) h4 {
+  color: #40975f;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.jackpot__content p {
+  color: #737579;
+  text-align: justify;
+}
+
+/* design & build css */
+
+#design__and__build__container {
+  padding: 70px 8%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.design__and__build__image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.design__and__build__image img {
+  width: 90%;
+}
+
+.design__and__build__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.design__and__build__content h1 {
+  color: #242f51;
+  font-size: 40px;
+  line-height: 47px;
+  margin-bottom: 25px;
+  width: 80%;
+}
+
+.design__and__build__content p {
+  font-size: 19px;
+  color: #737579;
+  width: 75%;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
 /* responsive with media queries */
 
 @media only screen and (max-width: 1200px) {
@@ -337,6 +458,10 @@ main {
   .app__features__container {
     padding: 70px 5%;
   }
+
+  #design__and__build__container {
+    padding: 70px 5%;
+  }
 }
 
 @media only screen and (max-width: 940px) {
@@ -352,7 +477,14 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
+
+  .smart__jackpot__cards {
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+/* font size responsive are */
 
 @media only screen and (max-width: 876px) {
   .banner__content h1 {
@@ -370,6 +502,26 @@ main {
   .app__features__content p {
     font-size: 15px;
   }
+
+  .smart__jackpot__heading h1 {
+    font-size: 40px;
+  }
+
+  .smart__jackpot__heading p {
+    font-size: 15px;
+  }
+
+  .jackpot__content p {
+    font-size: 15px;
+  }
+
+  .design__and__build__content h1 {
+    font-size: 40px;
+  }
+
+  .design__and__build__content p {
+    font-size: 15px;
+  }
 }
 
 @media only screen and (max-width: 848px) {
@@ -382,9 +534,8 @@ main {
     align-items: center;
   }
 
-  .app__features__container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
+  .banner__image img {
+    width: 70%;
   }
 }
 
@@ -429,11 +580,58 @@ main {
   nav input:checked ~ label::before {
     content: "\f00d";
   }
+
+  .nav__items li a:hover {
+    border-bottom: none;
+  }
+
+  #banner__container {
+    margin-top: 70px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .app__features__container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .app__features__image img {
+    width: 70%;
+  }
+
+  .smart__jackpot__heading {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .smart__jackpot__heading h1 {
+    width: 90%;
+  }
+
+  .smart__jackpot__heading p {
+    width: 80%;
+  }
+
+  #design__and__build__container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .design__and__build__image img {
+    width: 70%;
+  }
 }
 
 @media only screen and (max-width: 700px) {
   .companies__area {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 645px) {
+  .smart__jackpot__cards {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
