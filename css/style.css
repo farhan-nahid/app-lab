@@ -99,6 +99,7 @@ nav label {
   padding: 50px 8%;
   background-image: url("../images/illustrations/banner-bg.png");
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
