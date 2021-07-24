@@ -272,6 +272,7 @@ main {
 }
 
 .single__feature:hover {
+  cursor: context-menu;
   box-shadow: 2px 2px 20px gray;
 }
 
@@ -353,6 +354,7 @@ main {
 }
 
 .single__jackpot__card:hover {
+  cursor: context-menu;
   box-shadow: 2px 2px 20px gray;
 }
 
@@ -467,6 +469,7 @@ main {
 }
 
 .single__about__card:hover {
+  cursor: context-menu;
   box-shadow: 2px 2px 20px gray;
 }
 
@@ -534,6 +537,95 @@ main {
   text-align: center;
 }
 
+/* ultimate feature css */
+
+#ultimate__feature__container {
+  padding: 70px 8%;
+}
+
+#ultimate__feature__container h1 {
+  color: #242f51;
+  font-size: 40px;
+  line-height: 47px;
+  width: 40%;
+  margin-bottom: 20px;
+}
+
+.ultimate__feature__header {
+  font-size: 19px;
+  color: #737579;
+  width: 50%;
+}
+
+.ultimate__feature__area {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.ultimate__feature__cards {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.single__ultimate__feature {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+.single__ultimate__feature:hover {
+  cursor: context-menu;
+  box-shadow: 2px 2px 20px gray;
+}
+
+.single__ultimate__feature:nth-child(1) h4 {
+  color: #f66a78;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.single__ultimate__feature:nth-child(2) h4 {
+  color: #40975f;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.single__ultimate__feature:nth-child(3) h4 {
+  color: #40975f;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.single__ultimate__feature:nth-child(4) h4 {
+  color: #f66a78;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.ultimate__content p {
+  color: #737579;
+  text-align: justify;
+}
+
+.ultimate__feature__image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ultimate__feature__image img {
+  width: 100%;
+}
+
 /* responsive with media queries */
 
 @media only screen and (max-width: 1200px) {
@@ -549,6 +641,19 @@ main {
 
   .demo__button {
     margin-left: 10px;
+  }
+
+  .ultimate__feature__cards {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .single__ultimate__feature:nth-child(3) h4 {
+    color: #f66a78;
+  }
+
+  .single__ultimate__feature:nth-child(4) h4 {
+    color: #40975f;
   }
 }
 
@@ -570,6 +675,10 @@ main {
   }
 
   #about__us__container {
+    padding: 70px 5%;
+  }
+
+  #ultimate__feature__container {
     padding: 70px 5%;
   }
 }
@@ -742,6 +851,15 @@ main {
   }
 
   .design__and__build__image img {
+    width: 70%;
+  }
+
+  .ultimate__feature__area {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .ultimate__feature__image img {
     width: 70%;
   }
 }
