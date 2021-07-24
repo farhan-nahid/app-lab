@@ -191,7 +191,7 @@ nav label {
 /* companies css */
 
 main {
-  background-color: #f7f9fa;
+  background-color: #dfe8ec;
 }
 
 .companies__container {
@@ -428,6 +428,112 @@ main {
   text-align: justify;
 }
 
+/* about us css */
+
+#about__us__container {
+  padding: 70px 8%;
+}
+
+#about__us__container h1 {
+  color: #242f51;
+  font-size: 40px;
+  line-height: 47px;
+  width: 47%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.about__header__content {
+  font-size: 19px;
+  color: #737579;
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.about__us__cards {
+  margin-top: 50px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.single__about__card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+.single__about__card:hover {
+  box-shadow: 2px 2px 20px gray;
+}
+
+.about__icon {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.single__about__card:nth-child(1) h4 {
+  text-align: center;
+  color: #f66a78;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.single__about__card:nth-child(2) h4 {
+  color: #40975f;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.single__about__card:nth-child(3) h4 {
+  color: #f66a78;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.single__about__card:nth-child(4) h4 {
+  color: #40975f;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.single__about__card:nth-child(5) h4 {
+  color: #f66a78;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.single__about__card:nth-child(6) h4 {
+  color: #40975f;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.single__about__card p {
+  color: #737579;
+  text-align: center;
+}
+
 /* responsive with media queries */
 
 @media only screen and (max-width: 1200px) {
@@ -462,6 +568,10 @@ main {
   #design__and__build__container {
     padding: 70px 5%;
   }
+
+  #about__us__container {
+    padding: 70px 5%;
+  }
 }
 
 @media only screen and (max-width: 940px) {
@@ -479,6 +589,11 @@ main {
   }
 
   .smart__jackpot__cards {
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__us__cards {
     gap: 30px;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -520,6 +635,14 @@ main {
   }
 
   .design__and__build__content p {
+    font-size: 15px;
+  }
+
+  #about__us__container h1 {
+    font-size: 40px;
+  }
+
+  #about__us__container p {
     font-size: 15px;
   }
 }
@@ -631,6 +754,10 @@ main {
 
 @media only screen and (max-width: 645px) {
   .smart__jackpot__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .about__us__cards {
     grid-template-columns: repeat(1, 1fr);
   }
 }
