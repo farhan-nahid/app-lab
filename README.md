@@ -1,5 +1,7 @@
 ## [App Lab](https://ph-app-lab.netlify.app/)
 
+<img src="https://i.ibb.co/ZdvY4tz/App-Lab.png" alt="App-Lab" border="0">
+
 ### About This Site
 
 - This is a simple responsive landing page
