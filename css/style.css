@@ -1,14 +1,27 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 nav {
   height: 80px;
   padding: 20px 8%;
-  background-color: rgba(255, 255, 255, 0.545);
+  background-color: #ffffff8b;
   box-shadow: 0 25px 45px rgb(79 86 101 / 8%);
   position: fixed;
   right: 0;
@@ -735,9 +748,99 @@ main {
   margin-right: 10px;
 }
 
+/* faq area css */
+
+#faq__container {
+  padding: 70px 8%;
+}
+
+#faq__container h1 {
+  width: 60%;
+  margin: 0 auto;
+  color: #242f51;
+  font-size: 40px;
+  text-align: center;
+}
+
+.faq__header__content {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 19px;
+  color: #737579;
+  text-align: center;
+}
+
+.accordion__container {
+  padding: 70px 8%;
+}
+
+.accordion__item {
+  margin-top: 20px;
+  background-color: #f5f7fa;
+  border-radius: 10px;
+}
+
+.accordion__item:target .answer {
+  max-height: 250px;
+  overflow: hidden;
+  scroll-behavior: auto;
+}
+
+.accordion__item:target .remove__icon {
+  display: block;
+}
+
+.accordion__item:target .add__icon {
+  display: none;
+}
+
+.accordion__item a {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #242f51;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.remove__icon {
+  display: none;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  border-top: 2px solid #dfe8ec;
+  position: relative;
+  transition: 0.7s;
+  scroll-behavior: auto;
+}
+
+.answer::before {
+  position: absolute;
+  content: "";
+  height: 70%;
+  width: 6px;
+  background-color: #242f51;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  scroll-behavior: auto;
+}
+
+.answer p {
+  font-size: 19px;
+  color: #737579;
+  text-align: justify;
+  padding: 20px;
+}
+
 /* download area css */
 
 #download__container {
+  border-top: 1px solid #443d3d61;
   padding: 50px 8%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -813,7 +916,7 @@ main {
   background-color: #fff;
   border-radius: 20px;
   padding: 30px;
-  transform: 0.7s;
+  transition: 0.7s;
 }
 
 .testimonial:hover {
@@ -826,6 +929,7 @@ main {
 }
 
 .testimonial h5 {
+  color: #242f51;
   margin-top: 10px;
   font-size: 21px;
 }
@@ -859,6 +963,7 @@ main {
 }
 
 .client__name h6 {
+  color: #242f51;
   font-size: 15px;
 }
 
@@ -1062,6 +1167,14 @@ footer p a {
 
   .package__cards {
     padding: 50px 5%;
+  }
+
+  #faq__container {
+    padding: 70px 5%;
+  }
+
+  .accordion__container {
+    padding: 70px 5%;
   }
 
   #download__container {
