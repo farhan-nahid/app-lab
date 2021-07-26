@@ -1,4 +1,4 @@
-## [App Lab](https://ph-app-lab.netlify.app/)
+## [App Lab](https://app-lab.vercel.app/)
 
 ### <img src="https://i.ibb.co/9NX0pZF/App-Lab.png" alt="App-Lab" border="0">
 
