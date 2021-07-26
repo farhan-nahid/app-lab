@@ -1,3 +1,5 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
 *,
 *::before,
 *::after {
@@ -89,7 +91,7 @@ nav label {
 .brand__button {
   padding: 10px 40px;
   border-radius: 20px;
-  color: #fff;
+  color: #f5f7fa;
   background-color: #2500f9;
   border: 3px solid #2500f9;
   cursor: pointer;
@@ -101,7 +103,7 @@ nav label {
 
 .brand__button:hover {
   border: 3px solid #2500f9;
-  background-color: #fff;
+  background-color: #f5f7fa;
   color: #2500f9;
   transform: translateY(-5px);
 }
@@ -186,7 +188,7 @@ nav label {
   padding: 10px 40px;
   border-radius: 20px;
   border: 3px solid #2500f9;
-  background-color: #fff;
+  background-color: #f5f7fa;
   color: #2500f9;
   cursor: pointer;
   font-weight: 800;
@@ -197,7 +199,7 @@ nav label {
 
 .demo__button:hover {
   transform: translateY(-5px);
-  color: #fff;
+  color: #f5f7fa;
   background-color: #2500f9;
   border: 3px solid #2500f9;
 }
@@ -279,7 +281,7 @@ main {
 .single__feature {
   display: flex;
   margin: 30px 0px;
-  background-color: #fff;
+  background-color: #f5f7fa;
   padding: 20px;
   border-radius: 25px;
   transition: 0.5s;
@@ -361,7 +363,7 @@ main {
 }
 
 .single__jackpot__card {
-  background-color: #fff;
+  background-color: #f5f7fa;
   padding: 20px;
   border-radius: 25px;
   transition: 0.5s;
@@ -476,7 +478,7 @@ main {
 }
 
 .single__about__card {
-  background-color: #fff;
+  background-color: #f5f7fa;
   padding: 20px;
   border-radius: 25px;
   transition: 0.5s;
@@ -585,7 +587,7 @@ main {
 }
 
 .single__ultimate__feature {
-  background-color: #fff;
+  background-color: #f5f7fa;
   padding: 20px;
   border-radius: 25px;
   transition: 0.5s;
@@ -720,8 +722,9 @@ main {
 
 .single__package__header {
   padding: 50px;
-  background-color: #fafafa;
+  background-color: #f5f7fa;
   text-align: center;
+  width: 100%;
 }
 
 .package__offer__list {
@@ -774,73 +777,63 @@ main {
   padding: 70px 8%;
 }
 
-.accordion__item {
+.accordion__tabs {
   margin-top: 20px;
   background-color: #f5f7fa;
   border-radius: 10px;
 }
 
-.accordion__item:target .answer {
-  max-height: 250px;
-  overflow: hidden;
-  scroll-behavior: auto;
-}
-
-.accordion__item:target .remove__icon {
-  display: block;
-}
-
-.accordion__item:target .add__icon {
-  display: none;
-}
-
-.accordion__item a {
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
+.accordion__tabs > label {
+  padding: 12px 40px 12px 20px;
   color: #242f51;
   font-size: 21px;
+  line-height: 24px;
   font-weight: 700;
+  position: relative;
+  display: block;
+  cursor: pointer;
 }
 
-.remove__icon {
+.accordion__tabs > label:after {
+  content: "\f149";
+  font-family: fontawesome;
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  transform: rotate(90deg);
+  transition: transform 0.8s;
+}
+
+.accordion__tabs > .accordion__toggle:checked ~ label:after {
+  transform: rotate(0deg);
+}
+
+.accordion__tabs .accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  border-top: 4px solid #dfe8ec;
+  transition: 0.7s;
+}
+
+.accordion__tabs .accordion__toggle {
   display: none;
 }
 
-.answer {
-  max-height: 0;
-  overflow: hidden;
-  border-top: 2px solid #dfe8ec;
-  position: relative;
-  transition: 0.7s;
-  scroll-behavior: auto;
+.accordion__tabs > .accordion__toggle:checked ~ .accordion__content {
+  max-height: 100vh;
 }
 
-.answer::before {
-  position: absolute;
-  content: "";
-  height: 70%;
-  width: 6px;
-  background-color: #242f51;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  scroll-behavior: auto;
-}
-
-.answer p {
+.accordion__content p {
   font-size: 19px;
   color: #737579;
   text-align: justify;
   padding: 20px;
+  transition: 0.5s;
 }
 
 /* download area css */
 
 #download__container {
-  border-top: 1px solid #443d3d61;
   padding: 50px 8%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -913,7 +906,7 @@ main {
 }
 
 .testimonial {
-  background-color: #fff;
+  background-color: #f5f7fa;
   border-radius: 20px;
   padding: 30px;
   transition: 0.7s;
@@ -1103,323 +1096,4 @@ footer p a {
 .social__link a:nth-child(6):hover {
   color: #6c757d;
   cursor: pointer;
-}
-
-/* responsive with media queries */
-
-@media only screen and (max-width: 1200px) {
-  .app__features__content p {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 1040px) {
-  .banner__content h1 {
-    font-size: 50px;
-  }
-
-  .demo__button {
-    margin-left: 10px;
-  }
-
-  .ultimate__feature__cards {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-  }
-
-  .single__ultimate__feature:nth-child(3) h4 {
-    color: #f66a78;
-  }
-
-  .single__ultimate__feature:nth-child(4) h4 {
-    color: #40975f;
-  }
-}
-
-@media only screen and (max-width: 1010px) {
-  nav {
-    padding: 20px 5%;
-  }
-
-  #banner__container {
-    padding: 50px 5%;
-  }
-
-  .app__features__container {
-    padding: 70px 5%;
-  }
-
-  #design__and__build__container {
-    padding: 70px 5%;
-  }
-
-  #about__us__container {
-    padding: 70px 5%;
-  }
-
-  #ultimate__feature__container {
-    padding: 70px 5%;
-  }
-
-  #package__container {
-    padding: 70px 5%;
-  }
-
-  .package__cards {
-    padding: 50px 5%;
-  }
-
-  #faq__container {
-    padding: 70px 5%;
-  }
-
-  .accordion__container {
-    padding: 70px 5%;
-  }
-
-  #download__container {
-    padding: 50px 5%;
-  }
-
-  #testimonial__container {
-    padding: 70px 5%;
-  }
-
-  footer {
-    padding: 100px 5%;
-  }
-}
-
-@media only screen and (max-width: 940px) {
-  .brand__button {
-    padding: 10px 20px;
-  }
-
-  .demo__button {
-    padding: 10px 20px;
-  }
-
-  .companies__area {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-
-  .smart__jackpot__cards {
-    gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .about__us__cards {
-    gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* font size responsive are */
-
-@media only screen and (max-width: 876px) {
-  .banner__content h1 {
-    font-size: 40px;
-  }
-
-  .banner__content p {
-    font-size: 15px;
-  }
-
-  .app__features__content h1 {
-    font-size: 30px;
-  }
-
-  .app__features__content p {
-    font-size: 15px;
-  }
-
-  .smart__jackpot__heading h1 {
-    font-size: 40px;
-  }
-
-  .smart__jackpot__heading p {
-    font-size: 15px;
-  }
-
-  .jackpot__content p {
-    font-size: 15px;
-  }
-
-  .design__and__build__content h1 {
-    font-size: 40px;
-  }
-
-  .design__and__build__content p {
-    font-size: 15px;
-  }
-
-  #about__us__container h1 {
-    font-size: 40px;
-  }
-
-  #about__us__container p {
-    font-size: 15px;
-  }
-
-  .package__header__content {
-    font-size: 15px;
-  }
-}
-
-@media only screen and (max-width: 848px) {
-  #banner__container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-  }
-
-  .banner__image {
-    align-items: center;
-  }
-
-  .banner__image img {
-    width: 70%;
-  }
-}
-
-@media only screen and (max-width: 841px) {
-  nav label {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  nav .nav__items {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-color: #fff;
-    padding: 1rem 2rem;
-    border-top: 0.1rem solid rgb(0, 0, 0, 0.1);
-    box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.1);
-    transform-origin: top;
-    transform: scaleY(0);
-    opacity: 0;
-    transition: 0.3s linear;
-  }
-
-  .navbar ul li {
-    display: block;
-    margin-top: 15px;
-    border-bottom: 1px solid rgba(190, 179, 179, 0.37);
-  }
-
-  .navbar ul button {
-    margin-left: 0px;
-    margin-top: 15px;
-  }
-
-  nav input:checked ~ .nav__items {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-
-  nav input:checked ~ label::before {
-    content: "\f00d";
-  }
-
-  .nav__items li a:hover {
-    border-bottom: none;
-  }
-
-  #banner__container {
-    margin-top: 70px;
-  }
-
-  .package__cards {
-    padding: 50px 2%;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .app__features__container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-  }
-
-  .app__features__image img {
-    width: 70%;
-  }
-
-  .smart__jackpot__heading {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-  }
-
-  .smart__jackpot__heading h1 {
-    width: 90%;
-  }
-
-  .smart__jackpot__heading p {
-    width: 80%;
-  }
-
-  #design__and__build__container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-  }
-
-  .design__and__build__image img {
-    width: 70%;
-  }
-
-  .ultimate__feature__area {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-  }
-
-  .ultimate__feature__image img {
-    width: 70%;
-  }
-
-  .package__cards {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-  }
-
-  #download__container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-  }
-
-  .download__image img {
-    width: 70%;
-  }
-
-  #testimonial__container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-  }
-
-  .client__image img {
-    width: 70%;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .companies__area {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media only screen and (max-width: 645px) {
-  .smart__jackpot__cards {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .about__us__cards {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .companies__area {
-    grid-template-columns: repeat(1, 1fr);
-  }
 }

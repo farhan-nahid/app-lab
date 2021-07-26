@@ -1,0 +1,326 @@
+/* responsive with media queries */
+
+@media only screen and (max-width: 1200px) {
+  .app__features__content p {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  .banner__content h1 {
+    font-size: 50px;
+  }
+
+  .demo__button {
+    margin-left: 10px;
+  }
+
+  .ultimate__feature__cards {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .single__ultimate__feature:nth-child(3) h4 {
+    color: #f66a78;
+  }
+
+  .single__ultimate__feature:nth-child(4) h4 {
+    color: #40975f;
+  }
+}
+
+@media only screen and (max-width: 1010px) {
+  nav {
+    padding: 20px 5%;
+  }
+
+  #banner__container {
+    padding: 50px 5%;
+  }
+
+  .app__features__container {
+    padding: 70px 5%;
+  }
+
+  #design__and__build__container {
+    padding: 70px 5%;
+  }
+
+  #about__us__container {
+    padding: 70px 5%;
+  }
+
+  #ultimate__feature__container {
+    padding: 70px 5%;
+  }
+
+  #package__container {
+    padding: 70px 5%;
+  }
+
+  .package__cards {
+    padding: 50px 5%;
+  }
+
+  #faq__container {
+    padding: 70px 5%;
+  }
+
+  .accordion__container {
+    padding: 70px 5%;
+  }
+
+  #download__container {
+    padding: 50px 5%;
+  }
+
+  #testimonial__container {
+    padding: 70px 5%;
+  }
+
+  footer {
+    padding: 100px 5%;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .brand__button {
+    padding: 10px 20px;
+  }
+
+  .demo__button {
+    padding: 10px 20px;
+  }
+
+  .companies__area {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .smart__jackpot__cards {
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__us__cards {
+    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* font size responsive are */
+
+@media only screen and (max-width: 876px) {
+  .banner__content h1 {
+    font-size: 40px;
+  }
+
+  .banner__content p {
+    font-size: 15px;
+  }
+
+  .app__features__content h1 {
+    font-size: 30px;
+  }
+
+  .app__features__content p {
+    font-size: 15px;
+  }
+
+  .smart__jackpot__heading h1 {
+    font-size: 40px;
+  }
+
+  .smart__jackpot__heading p {
+    font-size: 15px;
+  }
+
+  .jackpot__content p {
+    font-size: 15px;
+  }
+
+  .design__and__build__content h1 {
+    font-size: 40px;
+  }
+
+  .design__and__build__content p {
+    font-size: 15px;
+  }
+
+  #about__us__container h1 {
+    font-size: 40px;
+  }
+
+  #about__us__container p {
+    font-size: 15px;
+  }
+
+  .package__header__content {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 848px) {
+  #banner__container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .banner__image {
+    align-items: center;
+  }
+
+  .banner__image img {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 841px) {
+  nav label {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  nav .nav__items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-top: 0.1rem solid rgb(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.1);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: 0.3s linear;
+  }
+
+  .navbar ul li {
+    display: block;
+    margin-top: 15px;
+    border-bottom: 1px solid rgba(190, 179, 179, 0.37);
+  }
+
+  .navbar ul button {
+    margin-left: 0px;
+    margin-top: 15px;
+  }
+
+  nav input:checked ~ .nav__items {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  nav input:checked ~ label::before {
+    content: "\f00d";
+  }
+
+  .nav__items li a:hover {
+    border-bottom: none;
+  }
+
+  #banner__container {
+    margin-top: 70px;
+  }
+
+  .package__cards {
+    padding: 50px 2%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .app__features__container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .app__features__image img {
+    width: 70%;
+  }
+
+  .smart__jackpot__heading {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .smart__jackpot__heading h1 {
+    width: 90%;
+  }
+
+  .smart__jackpot__heading p {
+    width: 80%;
+  }
+
+  #design__and__build__container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .design__and__build__image img {
+    width: 70%;
+  }
+
+  .ultimate__feature__area {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .ultimate__feature__image img {
+    width: 70%;
+  }
+
+  .package__cards {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  #download__container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .download__image img {
+    width: 70%;
+  }
+
+  #testimonial__container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .client__image img {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .companies__area {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .accordion__tabs > label {
+    font-size: 16px;
+  }
+
+  .accordion__content p {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 645px) {
+  .smart__jackpot__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .about__us__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .companies__area {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
